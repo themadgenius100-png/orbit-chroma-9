@@ -30,7 +30,7 @@ To elevate this project from a basic keypad to a cutting-edge desk controller, I
 
 ### 🔴 Roadblock 1: The Spaghetti Wire Disaster & Gird Alignment Annoyance
  When I first tried routing the schematic connections, I tried drawing direct green wire lines across the entire sheet. It immediately turned into a messy "spiderweb" of overlapping lines. To make it worse, my grid settings were mismatches at first! Lines were looking slightly crooked and completely refusing to snap onto the component pins, making it incredibly confusing to read and triggering errors. 
-**The Solution:** I fixed my grid snap settings, wiped the messy wires clean, and discovered "Global Labels". Instead of physical wires, I attached matching labels (like 'ENC_A' and 'ENC_B' to the pins. KiCad instantly knows they are connected behind the scenes, keeping my sheet layout looking professional and pristine.
+**The Solution:** I fixed my grid snap settings, wiped the messy wires clean, and discovered "Global Labels". Instead of physical wires, I attached matching labels (like 'ENC_A' and 'ENC_B') to the pins. KiCad instantly knows they are connected behind the scenes, keeping my sheet layout looking professional and pristine.
 
 ### 🔴 Roadblock 2: The Diode Direction Dilemma
 Placing 16 diodes in a perfect grid is harder than it looks. I spent a solid chunk of time realizing I had mixed up the orientations on a few of them. If a diode faces the wrong way, the key switch completely breaks because electricity can't flow back to the row pins.
