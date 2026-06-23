@@ -1,4 +1,5 @@
-# Orbit-Chroma-9 Devlog #1: Schematic Done, Moving to PCB Layout
+# Orbit-Chroma-9 
+# Devlog #1: Schematic Done, Moving to PCB Layout
 
 ## The Vision
 I'm building a 9-key mechanical macro pad powered by a Seeeduino XIAO. I'm planning to include an I2C OLED screen (hoping to get live Bongo Cat animations running on it!), a rotary encoder knob for volume control, and addressable RGB LEDs for underglow backlighting.
