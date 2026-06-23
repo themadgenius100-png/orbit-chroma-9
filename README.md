@@ -1,1 +1,2 @@
+Orbit-Chroma-9
 A high-spec 9-key mechanical macro pad powered by a Seeeduino XIAO, featuring custom RGB LED lighting, an I2C OLED screen for live animations (like Bongo Cat!), and a rotary encoder knob for smooth desktop control.
