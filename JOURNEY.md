@@ -11,7 +11,7 @@
 
 ## 🛠️ The Journey So Far
 
-### Step 1: Mapping the 4x4 Grid Matrix
+### Step 1: Mapping the 3x3 Grid Matrix
 Because the Seeeduino XIAO has a limited number of pins, I couldn't give all 9 switches their own direct connection. Instead, I learned how to wire them into an efficient **3x3 Keyboard Matrix** (3 rows and 3 columns). This allows the microcontroller to scan 9 distinct keys using only 6 GPIO pins total!
 
 ### Step 2: Adding the Electrical "One-Way Valves"
@@ -28,16 +28,19 @@ To elevate this project from a basic keypad to a cutting-edge desk controller, I
 
 ## ⚡ Challenges Faced, Overcoming Them & Lessons Learned
 
-### 🔴 Roadblock 1: The Spaghetti Wire Disaster & Gird Alignment Annoyance
- When I first tried routing the schematic connections, I tried drawing direct green wire lines across the entire sheet. It immediately turned into a messy "spiderweb" of overlapping lines. To make it worse, my grid settings were mismatches at first! Lines were looking slightly crooked and completely refusing to snap onto the component pins, making it incredibly confusing to read and triggering errors. 
+### 🔴 Roadblock 1: The Spaghetti Wire Disaster & Grid Alignment Annoyance
+ When I first tried routing the schematic connections, I tried drawing direct green wire lines across the entire sheet. It immediately turned into a messy "spiderweb" of overlapping lines. To make it worse, my grid settings were mismatches at first! Lines were looking slightly crooked and completely refusing to snap onto the component pins, making it incredibly confusing to read and triggering errors.
+
 **The Solution:** I fixed my grid snap settings, wiped the messy wires clean, and discovered "Global Labels". Instead of physical wires, I attached matching labels (like 'ENC_A' and 'ENC_B') to the pins. KiCad instantly knows they are connected behind the scenes, keeping my sheet layout looking professional and pristine.
 
 ### 🔴 Roadblock 2: The Diode Direction Dilemma
 Placing 16 diodes in a perfect grid is harder than it looks. I spent a solid chunk of time realizing I had mixed up the orientations on a few of them. If a diode faces the wrong way, the key switch completely breaks because electricity can't flow back to the row pins.
+
 **The Solution:** I had to carefully inspect the symbols and make sure every single little red triangle faced the exact same direction toward the row nets so current flows flawlessly.
 
 ### 🔴 Roadblock 3: The Footprint Missing Link
  When running the Electrical Rules Checker (ERC), KiCad threw a fit because it couldn't find the exact technical footprint library file for the physical 'Seeeduino XIAO' chip board.
+ 
 **The Solution:** I did some hardware research, and after countless tries and annoying moments, swapped out the missing footprint for a standard 'Package_DIP:DIP-14_W7.62mm' suggested by Gemini. Because it shares the exact same mechanical spacing (pin pitch: 2.54 mm & row width: 7.62 mm), the copper holes will perfectly align, allowing the XIAO hardware to slide directly into place!
 
 ---
